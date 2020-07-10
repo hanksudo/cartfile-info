@@ -30,9 +30,14 @@ def main(filepath):
                 if r.status == 403:
                     print(response["message"])
                 else:
-                    repo = response["items"][0] 
-                    print(repo["description"])
-                    print(repo["html_url"])
+                    items = response["items"]
+                    if len(items) == 0:
+                        print("Can't not found this repo!")
+                    else:
+                        repo = items[0]
+                        print(repo["description"])
+                        print(repo["html_url"])
+                        
                 print()
 
 def usage():
