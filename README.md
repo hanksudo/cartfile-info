@@ -5,7 +5,7 @@ Know your iOS project's Cartfile (Carthage)
 ## Usage
 
 ```python
-python app.py
+python app.py "<Path of Cartfile>"
 ```
 
 ## Output
